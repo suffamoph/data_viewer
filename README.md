@@ -9,3 +9,6 @@ This is a standalone project folder created alongside `ollama_project`.
 ## Next Steps
 - Choose a tech stack (Python, FastAPI, Streamlit, React, etc.)
 - Initialize dependencies and project structure
+
+
+上传csv，静态html会解析并展示图片和对应文本内容
