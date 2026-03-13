@@ -116,7 +116,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+            grid-template-columns: 1fr;
             gap: 14px;
         }
 
@@ -150,8 +150,8 @@
         }
 
         .card-main {
-            display: grid;
-            grid-template-columns: 220px 1fr;
+            display: flex;
+            flex-direction: column;
             gap: 12px;
             padding: 12px;
             align-items: stretch;
@@ -159,7 +159,7 @@
 
         .thumb-wrap {
             width: 100%;
-            min-height: clamp(320px, 58vh, 620px);
+            min-height: clamp(240px, 40vh, 360px);
             border: 1px solid var(--line);
             border-radius: 10px;
             overflow: hidden;
@@ -185,8 +185,8 @@
         }
 
         .texts {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 8px;
             min-width: 0;
         }
