@@ -132,24 +132,27 @@
         }
 
         .card-head {
+            position: absolute;
+            top: 6px;
+            left: 6px;
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 12px;
-            border-bottom: 1px solid var(--line);
-            background: #fbfcfe;
+            padding: 0;
+            z-index: 10;
         }
 
         .id-badge {
             display: inline-flex;
             align-items: center;
-            padding: 3px 8px;
-            border-radius: 999px;
-            border: 1px solid #d1d5db;
-            background: #fff;
-            color: #374151;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: none;
+            background: rgba(15, 23, 42, 0.85);
+            color: #fff;
             font-size: 12px;
             font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .card-main {
@@ -160,11 +163,12 @@
         }
 
         .thumb-wrap {
+            position: relative;
             flex: 0 0 220px;
             min-height: 175px;
             border: 1px solid var(--line);
             border-radius: 10px;
-            overflow: hidden;
+            overflow: visible;
             background: #f8fafc;
             display: flex;
             align-items: flex-start;
@@ -637,11 +641,13 @@
 
             return `
                 <article class="card">
-                    <div class="card-head">
-                        <span class="id-badge">${escapeHtml(group.id)}</span>
-                    </div>
                     <div class="card-main">
-                        <div class="thumb-wrap">${imageHtml}</div>
+                        <div class="thumb-wrap">
+                            <div class="card-head">
+                                <span class="id-badge">${escapeHtml(group.id)}</span>
+                            </div>
+                            ${imageHtml}
+                        </div>
                         <div class="texts">${textsHtml}</div>
                     </div>
                 </article>
